@@ -1,0 +1,723 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Header */
+header {
+  background-color: #000;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+header .hContent {
+  text-transform: uppercase;
+  margin-left: 10%;
+}
+
+.RText {
+  color: #ff0015;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+/* Container for the layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  position: relative;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  display: flex;
+}
+
+/* Logo container */
+.logo {
+  flex-shrink: 0; /* Prevent the logo from shrinking */
+}
+
+/* Positioning for nav-links */
+.nav-links {
+  position: absolute;
+  top: 10px;
+  right: 45px;
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Add spacing between links */
+}
+
+/* Search input field */
+.search-input {
+  display: none; /* Initially hidden */
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: width 0.3s ease;
+  width: 0;
+}
+
+/* Show the search input when the search icon is clicked */
+.search-icon:focus + .search-input {
+  display: inline;
+  width: 200px; /* Set the expanded width */
+}
+
+/* Style for the search icon */
+.search-icon {
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* Expanding search input on focus */
+.navbar:focus-within .search-input {
+  display: block;
+  width: 200px;
+}
+
+/* Style for the login and cart links */
+.nav-links a {
+  color: #000000;
+  text-decoration: none;
+  margin-left: 20px; /* Space between links */
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #e63946; /* Optional: Hover effect */
+}
+
+/* Style for navbar links and dropdowns */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #000000;
+  border: none;
+}
+
+nav a:hover {
+  background-color: #d3d3d3;
+}
+
+/* Dropdown styles */
+
+nav .dropdown > a::after {
+  content: "▼";
+  font-size: 12px;
+  color: #000;
+  margin-left: 10px;
+}
+
+.dropdown-content {
+  display: none; /* Hide dropdown content by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Show dropdown content on hover */
+}
+
+.dropdown-content li a {
+  padding: 10px 20px;
+  color: #000000;
+  background-color: #ffffff;
+  border-bottom: 1px solid #444;
+}
+
+.dropdown-content li a:hover {
+  background-color: #675052;
+  color: white;
+}
+
+/* Banner */
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner {
+  position: relative;
+  text-align: center;
+  height: 700px;
+}
+
+.banner-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.banner-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 20%;
+  right: 60%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: left;
+}
+
+.banner-content h1 {
+  font-size: 3rem;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.cta-button {
+  padding: 15px 20px;
+  text-align: center;
+  background-color: #e63946;
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* Banner Form */
+.banner-form {
+  position: absolute;
+  transform: translate(120%, -110%);
+  background-color: rgba(255, 255, 255);
+  padding: 20px;
+  border-radius: 20px;
+  width: 600px;
+  height: 580px;
+  text-align: center;
+}
+.banner-logo img {
+  width: 30%;
+  height: 40%;
+  padding: 10px;
+  margin-top: 20px;
+  object-fit: cover;
+}
+
+.banner-tagline p,
+a {
+  margin: 10px;
+  padding: 10px;
+  font-size: small;
+}
+
+.banner-form h3 {
+  margin-bottom: 10px;
+  font-size: xx-large;
+}
+
+.banner-form input,
+.banner-form button {
+  width: 80%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  background-color: #dddddd;
+  border: 1px solid #ccc;
+}
+
+.banner-form button {
+  background-color: #000000;
+  color: white;
+  font-size: large;
+  cursor: pointer;
+}
+/* Style for the video section */
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+/* Video */
+video {
+  width: 60%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 28px;
+}
+
+.text-overlay,
+.video-controls {
+  position: relative;
+  transform: translateY(-30vh);
+}
+
+.video-overlay {
+  position: absolute;
+  top: 90.5vh;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+  border-radius: 28px;
+  background: rgba(0, 0, 0, 0.7);
+  animation: easeIn 1s ease-in-out 2s 10 direction fill-mode;
+}
+
+/* Overlay text */
+.text-overlay {
+  text-align: center;
+  position: relative;
+  margin-bottom: 10px;
+  top: 60%;
+}
+
+.text-overlay .RText {
+  font-size: 1rem;
+  color: #ff0000;
+  text-transform: uppercase;
+}
+
+.text-overlay h2 {
+  font-size: 2rem;
+  color: #dfdfdf;
+  font-weight: 100;
+  margin: 10px 0;
+}
+
+/* Play/Pause Button */
+.video-controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.video-controls button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e63946;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.video-controls button:hover {
+  background-color: #d32f2f;
+}
+
+/* Lorem */
+p.Lorem {
+  display: flex;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-left: 25%;
+  padding: 5%;
+  color: #333;
+  width: 50%;
+}
+
+/* Services */
+.services {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Smaller column minimum */
+  gap: 20px;
+  max-width: 1000px; /* Reduce the maximum width */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px;
+}
+
+.service {
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s ease;
+  width: auto;
+}
+
+.service hr {
+  position: absolute;
+  left: 6%;
+  bottom: 70%;
+  border: 0;
+  height: 3px;
+  width: 40px;
+  background-color: #ff0000;
+  margin: 20px 0;
+  opacity: 0;
+}
+
+.service:hover hr {
+  opacity: 1;
+  z-index: 2;
+  transition-delay: 0.2s;
+}
+
+.service:hover {
+  transform: scale(1.05);
+}
+
+.service img {
+  width: 100%;
+  height: 300px;
+}
+
+.service h3,
+.service p {
+  position: absolute;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service h3 {
+  position: absolute;
+  top: 40%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.service p {
+  position: absolute;
+  bottom: 35%;
+  left: 38%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+}
+
+.service:hover h3,
+.service:hover p {
+  opacity: 1;
+  z-index: 2;
+  transition-delay: 0.2s;
+}
+
+.service:hover img {
+  filter: brightness(80%);
+}
+
+.service button {
+  opacity: 0;
+  padding: 10px;
+  position: relative;
+  left: 8%;
+  top: -20%;
+  border: none;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.service button:hover {
+  background-color: rgb(255, 0, 0);
+  color: white;
+}
+
+.service:hover button {
+  opacity: 1;
+  z-index: 2;
+  transition-delay: 0.2s;
+}
+
+/* Reviews */
+.reviews {
+  margin-top: 50px;
+  text-align: center;
+  padding: 40px 20px;
+  background: none;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: white;
+}
+
+/* Carousel itself */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Each review */
+.review {
+  flex: 1;
+  position: relative;
+  height: 300px;
+  width: 300px;
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  text-align: center;
+  margin: 10px;
+}
+
+.review-rating {
+  margin-top: 20px;
+  color: rgb(255, 204, 0);
+}
+
+.review-text {
+  margin: 20px 100px 0 100px;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #555;
+  text-align: center;
+}
+
+.review-author {
+  margin-top: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Navigation Arrows */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  color: rgb(0, 0, 0);
+  font-size: 3rem;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+/* Styling for hover effect on arrows */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Scroll animation for carousel */
+.carousel-container:focus-within .carousel {
+  animation: scroll 15s infinite linear;
+}
+
+/* @keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+} */
+
+.newsletter {
+  background-color: #f1f1f1;
+  text-align: center;
+  font-weight: 100;
+  height: 300px;
+  margin-bottom: -3%;
+
+}
+
+.newsletter h2 {
+  font-weight: 500;
+  padding: 20px;
+}
+
+.newsletter p.txt-newsletter {
+  padding-bottom: 20px;
+  color: #3f3f3f;
+
+}
+
+.newsletter .subscription{
+  position: absolute;
+  justify-content: center;
+  left: 32%;
+  padding: 20px;
+}
+
+.newsletter input{
+  padding: 20px;
+  width: 430px;
+  height: 35px;
+  font-size: 0.95rem;
+}
+
+.newsletter button {
+  position: absolute;
+  padding: 20px;
+  height: 35px;
+  width: 180px;
+  color: white;
+  background-color: #000;
+}
+
+.newsletter .subscribe{
+  position: absolute;
+  left: 20%;
+  top: 18%;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+/* footer */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: flex-end;  /* Align content to the right */
+  align-items: flex-start;
+  height: 400px;
+  gap: 40px;
+}
+
+
+.footer-logo {
+  flex: 0 0 auto; /* Prevents resizing */
+  margin-top: 10%;
+  margin-right: 10%;
+}
+
+.footer-logo img{
+  filter: invert(1);
+}
+
+.footer-container {
+  display: flex;
+  gap: 40px;  /* Space between the footer lists */
+  margin-right: 20%;
+}
+
+/* Footer List */
+.footer-ul {
+  list-style: none;
+  margin-top: 50px;
+}
+
+/* Footer List Items */
+.footer-ul li {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+/* Footer Links */
+.footer-ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer-ul li a:hover {
+  color: #e63946;  /* Change to a highlight color on hover */
+}
+
+/* Optional: Make phone number and email stand out more */
+.footer-ul li a.RText {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: red;
+}
+
