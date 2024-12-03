@@ -17,23 +17,25 @@ header {
   color: #ffffff;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  height: 4vh;
 }
 
 .header-content {
   display: flex;
-  width: 100vw;
+  flex-direction: row;
+  width: 99vw;
   justify-content: space-between;
+  font-size: 1.2vw;
+  margin-top: 0.5%;
 }
 
 header .hContent {
   text-transform: uppercase;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 
 .RText {
   color: #ff0015;
-  font-size: 1rem;
   text-decoration: none;
 }
 
@@ -266,7 +268,7 @@ nav .dropdown > a::after {
 }
 
 .banner-tagline p,
-a {
+.banner-tagline a {
   margin: 1%;
   padding: 1%;
   font-size: 1vw;
@@ -616,7 +618,6 @@ p.Lorem {
   }
 } */
 
-
 /* newsletter */
 .newsletter {
   background-color: #f1f1f1;
@@ -650,7 +651,7 @@ p.Lorem {
   width: 25vw;
   height: 4vh;
   font-size: 0.95rem;
-  text-align:left;
+  text-align: left;
   padding-left: 1%;
 }
 
@@ -663,9 +664,9 @@ p.Lorem {
   background-color: #000;
 }
 
-.newsletter button:hover{
+.newsletter button:hover {
   border: none;
-  transform:scale(1.1);
+  transform: scale(1.1);
 }
 
 .newsletter .subscribe {
@@ -674,7 +675,6 @@ p.Lorem {
   font-size: 1.1vw;
   text-transform: uppercase;
 }
-
 
 /* footer */
 footer {
