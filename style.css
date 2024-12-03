@@ -667,8 +667,8 @@ footer {
   color: #fff;
   padding: 40px 20px;
   display: flex;
-  justify-content: flex-end;  /* Align content to the right */
-  align-items: flex-start;
+  justify-content: flex-start;  /* Align content to the right */
+  align-items: center;
   height: 400px;
   gap: 40px;
 }
@@ -676,8 +676,7 @@ footer {
 
 .footer-logo {
   flex: 0 0 auto; /* Prevents resizing */
-  margin-top: 10%;
-  margin-right: 10%;
+  margin-left: 10%;
 }
 
 .footer-logo img{
@@ -686,14 +685,15 @@ footer {
 
 .footer-container {
   display: flex;
-  gap: 40px;  /* Space between the footer lists */
-  margin-right: 20%;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
 /* Footer List */
 .footer-ul {
   list-style: none;
   margin-top: 50px;
+  padding: 0;
 }
 
 /* Footer List Items */
@@ -711,13 +711,56 @@ footer {
 }
 
 .footer-ul li a:hover {
-  color: #e63946;  /* Change to a highlight color on hover */
+  color: #e63946; 
 }
 
-/* Optional: Make phone number and email stand out more */
+
 .footer-ul li a.RText {
   font-weight: bold;
   font-size: 1.1rem;
   color: red;
 }
 
+/* General mobile styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    position: static;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .banner-content {
+    top: 50%;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .banner-form {
+    width: 90%;
+    height: auto;
+    transform: translate(0, 0);
+    position: static;
+    margin: 20px auto;
+  }
+
+  .video-container video {
+    width: 90%;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
